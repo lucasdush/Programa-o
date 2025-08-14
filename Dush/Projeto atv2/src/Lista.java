@@ -8,15 +8,26 @@ public class Lista {
         String resposta;
 
         do {
-            System.out.println("Digite uma nota:");
-            notas.add(ler.nextDouble());
+            double nota;
 
-            System.out.println("Deseja inserir mais uma nota?");
-            System.out.println("Pressione a tecla N para sair");
+            // Validação da nota
+            do {
+                System.out.print("Digite uma nota (entre 0 e 10): ");
+                nota = ler.nextDouble();
+
+                if (nota < 0 || nota > 10) {
+                    System.out.println("Nota inválida! Por favor, digite um valor entre 0 e 10.");
+                }
+            } while (nota < 0 || nota > 10);
+
+            notas.add(nota);
+
+            System.out.print("Deseja inserir mais uma nota? (Digite 'n' para sair): ");
             resposta = ler.next();
         } while (!resposta.equalsIgnoreCase("n"));
 
-        System.out.println("\nExibindo as notas:");
+        // Exibição das notas
+        System.out.println("\nNotas inseridas:");
         for (double nota : notas) {
             System.out.println("Nota: " + nota);
         }

@@ -6,7 +6,7 @@ public class Cliente {
     private String nome;
     private int idade;
 
-    // construtor
+    // construtora
 
 
     @Override

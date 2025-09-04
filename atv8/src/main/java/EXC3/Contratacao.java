@@ -1,4 +1,4 @@
-package EXC3;
-
-public class Contratacao {
+public interface Contratacao {
+    void admitir(Funcionario funcionario);
+    void demitir(Funcionario funcionario);
 }

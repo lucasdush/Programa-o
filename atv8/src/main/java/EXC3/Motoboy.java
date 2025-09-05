@@ -6,14 +6,18 @@ public class Motoboy extends Funcionario {
         this.carteiraDeHabilitacao = carteiraDeHabilitacao;
     }
 
+    public String getCarteiraDeHabilitacao() { return carteiraDeHabilitacao; }
+    public void setCarteiraDeHabilitacao(String carteiraDeHabilitacao) { this.carteiraDeHabilitacao = carteiraDeHabilitacao; }
+
     @Override
     public double getSalarioFinal() {
-        return salarioBase; // Motoboy não tem bônus
+        return salarioBase; // sem bônus
     }
 
     @Override
     public String toString() {
         return super.toString() +
+                "\nCargo: Motoboy" +
                 "\nCarteira de Habilitação: " + carteiraDeHabilitacao +
                 "\nSalário Final: " + getSalarioFinal();
     }
